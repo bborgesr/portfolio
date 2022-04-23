@@ -25,7 +25,7 @@
           <div class="txt">
             <h1>
               <br />
-              Hi, I'm Barbara
+              Hi, I'm Bárbara
               <br />
               I'm a software developer, who is passionate about the power of
               data
@@ -633,7 +633,7 @@ section {
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: var(--txt-med);
   margin-bottom: 2rem;
   cursor: default;
