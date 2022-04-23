@@ -4,21 +4,18 @@
       <div class="sider sidebar">
         <div class="holder">
           <div class="xx">
-            <a class="title">Inhaltsverzeichnis</a>
+            <a class="title">Contents</a>
             <a class="listitem" href="#intro">Intro</a>
-            <a class="listitem" href="#Intro">Über Mich</a>
-            <a class="listitem" href="#Projekte">Projekte</a>
-            <a class="listitem" href="#Lebenslauf">Lebenslauf</a>
-            <a class="listitem" href="#Kontakt">Kontakt</a>
+            <a class="listitem" href="#about">About me</a>
+            <a class="listitem" href="#experience">Experience</a>
+            <a class="listitem" href="#cv">CV</a>
+            <a class="listitem" href="#contact">Contact</a>
             <br />
             <div class="contact">
-              <a href="mailto:yourmail@gmail.com"> yourmail@gmail.com</a>
-              <a href="https://github.com/your-github/"
-                >github.com/your-github</a
-              >
-              <a href="tel:+1-202-555-0179">+1-202-555-0179</a>
-              <br />
-              <a href="/impressum">Impressum</a>
+              <a href="mailto:barb.b.ribeiro@gmail.com ">
+                barb.b.ribeiro@gmail.com
+              </a>
+              <a href="https://github.com/bborgesr/">github.com/bborgesr</a>
             </div>
           </div>
         </div>
@@ -27,30 +24,35 @@
         <section id="intro">
           <div class="txt">
             <h1>
-              Hi, Ich bin Name.
               <br />
-              Ich komme aus Göttingen und code zum Spaß.
+              Hi, I'm Barbara
+              <br />
+              I'm a software developer, who is passionate about the power of
+              data
             </h1>
             <br />
-            <a href="#Intro">Über Mich <Fa fa="arrow-down" /></a>
+            <a href="#about">About me <Fa fa="arrow-down" /></a>
           </div>
         </section>
-        <section id="Intro">
-          <h2>Über Mich</h2>
+        <section id="about">
+          <h2>About me</h2>
           <span>
-            Ursprünglich komme ich aus der Grafik- & Medienbranche. Mein Bedarf
-            nach Kreativität war damit gedeckt, aber Pixel schieben reicht mir
-            nicht mehr aus. Viel lieber beschäftige ich mich mit den scheinbar
-            unendlich vielen fordernden Problemstellungen, die das Programmieren
-            bietet.
+            I am a jack of all trades when it comes to software development. My
+            academic path had an international bent, having completed the IB
+            program at <a href="https://uwcrcn.no/">RCNUWC</a> in Norway and my
+            bachelor's at
+            <a href="https://www.macalester.edu/"> Macalester College</a>
+            in the US. I graduated summa cumma laude with a double major in
+            Computer Science, and Applied Mathematics and Statistics, and a
+            double minor in Physics and Sociology.
           </span>
           <br />
         </section>
-        <section id="Projekte">
+        <section id="experience">
           <br />
           <br />
           <br />
-          <h2>Projekte</h2>
+          <h2>Experience</h2>
           <div class="cards">
             <div class="card-col">
               <Card :item="projects[0]" :txt="select" />
@@ -62,12 +64,11 @@
             </div>
           </div>
         </section>
-        <section id="Erfahrungen"></section>
-        <section id="Lebenslauf">
-          <h2>Lebenslauf</h2>
-          <div class="lebenslauf">
-            <h4>Berufserfahrung</h4>
-            <div class="cont" v-for="i in erfahrungen" :key="i.ort">
+        <section id="cv">
+          <h2>CV</h2>
+          <div class="cv">
+            <h4>Work experience</h4>
+            <div class="cont" v-for="i in work" :key="i.ort">
               <span>{{ i.datum }}</span>
               <span>{{ i.extra }}</span>
               <span>{{ i.titel }}</span>
@@ -75,9 +76,9 @@
               <span>{{ i.txt }}</span>
             </div>
           </div>
-          <div class="bildungsweg">
-            <h4>Bildungsweg</h4>
-            <div class="cont" v-for="i in bildung" :key="i.titel">
+          <div class="education">
+            <h4>Education</h4>
+            <div class="cont" v-for="i in education" :key="i.titel">
               <span>{{ i.datum }}</span>
               <span>{{ i.extra }}</span>
               <span>{{ i.titel }}</span>
@@ -86,20 +87,24 @@
             </div>
           </div>
           <br />
-          <a href="/cv.pdf"> <Fa fa="file-pdf" /> PDF herunterladen </a>
+          <a
+            class="btn"
+            href="/docs/CV_BBR.pdf"
+            download
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Fa fa="file-pdf" /> PDF download</a
+          >
         </section>
-        <section id="Kontakt">
-          <h2>Kontakt</h2>
-          yourmail@gmail.com
+        <section id="contact">
+          <h2>Contact</h2>
+          barb.b.ribeiro@gmail.com
           <br />
-          <a href="mailto:yourmail@gmail.com">
-            <Fa fa="envelope-o" /> Email schreiben
+          <br />
+          <a class="btn" href="mailto:barb.b.ribeiro@gmail.com">
+            <Fa fa="envelope-o" /> Email me
           </a>
-          <br />
-          <br />
-          +1-202-555-0179
-          <br />
-          <a href="tel:+1-202-555-0179"> <Fa fa="phone" /> Anrufen</a>
         </section>
       </div>
     </div>
@@ -119,7 +124,7 @@ export default {
     PopOver,
   },
   data: () => ({
-    erfahrungen: [
+    work: [
       {
         datum: '01 / 2020 – heute',
         extra: '',
@@ -142,7 +147,7 @@ export default {
         txt: 'Bildbearbeitung, Logo & CI Entwicklung',
       },
     ],
-    bildung: [
+    education: [
       {
         datum: '04 / 2019 – 06 / 2020',
         extra: '',
@@ -335,8 +340,8 @@ export default {
     font-size: 7vw !important;
   }
 }
-#Kontakt,
-#Lebenslauf {
+#contact,
+#cv {
   a {
     color: white;
     i {
@@ -347,8 +352,8 @@ export default {
     color: hsl(0deg 0% 63%);
   }
 }
-.bildungsweg,
-.lebenslauf {
+.education,
+.cv {
   h4 {
     font-size: 0.9rem;
   }
@@ -409,7 +414,7 @@ export default {
     color: white;
   }
 }
-#Intro {
+#about {
   a {
     color: var(--accent-1);
     text-decoration: none;
@@ -726,5 +731,34 @@ div > .main {
 }
 #intro {
   opacity: 100;
+}
+</style>
+<style>
+/* unvisited link */
+a:link {
+  color: var(--accent-2);
+}
+
+/* visited link */
+a:visited {
+  color: var(--accent-1);
+}
+
+/* mouse over link */
+a:hover {
+  color: var(--accent-5);
+}
+
+/* selected link */
+a:active {
+  color: var(--accent-3);
+}
+
+.btn {
+  background-color: var(--accent-2);
+  color: var(--bg) !important;
+  padding: 0.75rem 1.8rem;
+  border-radius: 0.4rem;
+  text-decoration: none;
 }
 </style>
