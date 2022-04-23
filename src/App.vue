@@ -5,7 +5,6 @@
       <div class="gradient-overlay"></div>
       <Sketch />
     </div>
-    <Hero />
     <MainView :scrolledDown="!scrolledDown" />
   </div>
 </template>
@@ -14,14 +13,12 @@
 import Navbar from './components/globals/Navbar.vue';
 import Sketch from './components/sketches/Sketch.vue';
 import MainView from './components/MainView.vue';
-import Hero from './components/Hero/Hero.vue';
 
 export default {
   name: 'App',
   components: {
     Navbar,
     MainView,
-    Hero,
     Sketch,
   },
   data: () => ({
@@ -119,24 +116,12 @@ export default {
 .splash {
   width: 100%;
   position: absolute;
-  /* background: hsl(0deg 0% 99%); */
   z-index: -10;
   top: 0;
   background: center;
   background-size: cover;
-  /* background: linear-gradient(0deg, rgb(242 242 242) 0%, rgb(247 247 247) 100%); */
-  /* background-image: linear-gradient(
-      0deg,
-      var(--bg-root) 0%,
-      rgb(241 241 241 / 41%) 550%
-    ),
-    url(/images/1990.jpg); */
   background-repeat: no-repeat;
 }
-</style>
-
-<style scoped>
-/* HEADER */
 </style>
 
 <style>
@@ -158,10 +143,7 @@ img {
   display: block;
 }
 #app {
-  /* font-family: 'Roboto', sans-serif; */
   font-family: 'Inter', sans-serif;
-  /* font-family: 'Source Sans Pro', 'HelveticaNeue', sans-serif; */
-  /* font-family: 'HelveticaNeue', sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: white;
@@ -187,19 +169,6 @@ img {
   src: url('fonts/HelveticaNeue-Light.ttf') format('ttf');
   font-weight: 300;
 }
-/*
-@font-face {
-  font-family: 'myfont';
-  src: url('fonts/awesome-font-boldoblique.woff') format('woff');
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'myfont';
-  src: url('fonts/awesome-font-oblique.woff') format('woff');
-  font-style: italic;
-} */
 body {
   background: var(--bg-root);
 }
