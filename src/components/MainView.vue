@@ -69,20 +69,20 @@
           <div class="cv">
             <h4>Work experience</h4>
             <div class="cont" v-for="i in work" :key="i.ort">
-              <span>{{ i.datum }}</span>
+              <span>{{ i.date }}</span>
               <span>{{ i.extra }}</span>
-              <span>{{ i.titel }}</span>
-              <span>{{ i.ort }}</span>
+              <span>{{ i.title }}</span>
+              <span>{{ i.where }}</span>
               <span>{{ i.txt }}</span>
             </div>
           </div>
           <div class="education">
             <h4>Education</h4>
             <div class="cont" v-for="i in education" :key="i.titel">
-              <span>{{ i.datum }}</span>
+              <span>{{ i.date }}</span>
               <span>{{ i.extra }}</span>
-              <span>{{ i.titel }}</span>
-              <span>{{ i.ort }}</span>
+              <span>{{ i.title }}</span>
+              <span>{{ i.where }}</span>
               <span>{{ i.txt }}</span>
             </div>
           </div>
@@ -126,48 +126,58 @@ export default {
   data: () => ({
     work: [
       {
-        datum: '01 / 2020 – heute',
+        date: '2020 – today',
         extra: '',
-        titel: 'Maschinenbediener im Metallbau',
-        ort: 'YourJobsLocation Ldt, TX',
-        txt: '',
+        title: 'Fullstack Developer',
+        where: 'LTPlabs, Remote',
+        txt:
+          'Maintenance of various applications for different clients, custom-made ' +
+          'to their needs and with embedded analytics to empower decision-making',
       },
       {
-        datum: '11 / 2016',
-        extra: '(8 Wochen Praktikum)',
-        titel: 'Als Mediengestalter (Digital & Print)',
-        ort: 'YourJobsLocation Ldt, TX',
-        txt: 'Print-Design, Web-Development, UI/UX',
+        date: '2018 - 2019',
+        extra: '',
+        title: 'Frontend Developer',
+        where: 'Blip, Porto',
+        txt:
+          'Maintenance of the www.paddypower.com betting website, including ' +
+          'bug fixing and feature implementation, such as a Multivariate Testing ' +
+          'campaign to test different UIs and a Bet Tracker project, to provide users ' +
+          'with one place where all bets, open and settled, are displayed',
       },
       {
-        datum: '09 / 2014',
-        extra: '(3 Wochen Praktikum)',
-        titel: 'Als Mediengestalter (Digital & Print)',
-        ort: 'YourJobsLocation Ldt, TX',
-        txt: 'Bildbearbeitung, Logo & CI Entwicklung',
+        date: '2016 - 2018',
+        extra: '',
+        title: 'Software Developer',
+        where: 'RStudio, Remote',
+        txt:
+          'Part of the Shiny development team (https://shiny.rstudio.com/). We ' +
+          'were responsible for maintaining several R packages: shiny, ' +
+          'shinydashboard, flexdashboard and many others that would pop up along ' +
+          'the way.',
       },
     ],
     education: [
       {
-        datum: '04 / 2019 – 06 / 2020',
+        date: '04 / 2019 – 06 / 2020',
         extra: '',
-        titel: 'Wirtschaftsinformatik Studium',
-        ort: 'YourUniversity Ldt, TX',
+        title: 'Wirtschaftsinformatik Studium',
+        where: 'YourUniversity Ldt, TX',
         txt: '',
       },
       {
-        datum: '08 / 2015 – 06 / 2018',
+        date: '08 / 2015 – 06 / 2018',
         extra: '',
-        titel:
+        title:
           'Fachabitur Berufsschulabschluss zum gestaltungstechnischen Assistenten',
-        ort: 'YourSchool Ldt, TX',
+        where: 'YourSchool Ldt, TX',
         txt: '',
       },
       {
-        datum: '08 / 2009 – 07 / 2015',
+        date: '08 / 2009 – 07 / 2015',
         extra: '',
-        titel: 'Realschulabschluss',
-        ort: 'YourSchool Ldt, TX',
+        title: 'Realschulabschluss',
+        where: 'YourSchool Ldt, TX',
         txt: '',
       },
     ],
