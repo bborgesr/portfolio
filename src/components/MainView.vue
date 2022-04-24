@@ -102,6 +102,11 @@
           barb.b.ribeiro@gmail.com
           <br />
           <br />
+          For job offers, I am only open to fully remote software development
+          positions. Please include a salary range in your email or it may be
+          ignored.
+          <br />
+          <br />
           <a class="btn" href="mailto:barb.b.ribeiro@gmail.com">
             <Fa fa="envelope-o" /> Email me
           </a>
