@@ -42,7 +42,7 @@
             program at <a href="https://uwcrcn.no/">RCNUWC</a> in Norway and my
             bachelor's at
             <a href="https://www.macalester.edu/"> Macalester College</a>
-            in the US. I graduated summa cumma laude with a double major in
+            in the US. I graduated summa cum laude with a double major in
             Computer Science, and Applied Mathematics and Statistics, and a
             double minor in Physics and Sociology.
           </span>
@@ -74,6 +74,7 @@
               <span>{{ i.title }}</span>
               <span>{{ i.where }}</span>
               <span>{{ i.txt }}</span>
+              <br />
             </div>
           </div>
           <div class="education">
@@ -84,6 +85,7 @@
               <span>{{ i.title }}</span>
               <span>{{ i.where }}</span>
               <span>{{ i.txt }}</span>
+              <br />
             </div>
           </div>
           <br />
@@ -164,25 +166,19 @@ export default {
     ],
     education: [
       {
-        date: '04 / 2019 – 06 / 2020',
-        extra: '',
-        title: 'Wirtschaftsinformatik Studium',
-        where: 'YourUniversity Ldt, TX',
-        txt: '',
-      },
-      {
-        date: '08 / 2015 – 06 / 2018',
+        date: '2011 – 2015',
         extra: '',
         title:
-          'Fachabitur Berufsschulabschluss zum gestaltungstechnischen Assistenten',
-        where: 'YourSchool Ldt, TX',
-        txt: '',
+          "Bachelor's with a double major in Computer Science, and Applied Mathematics " +
+          'and Statistics ',
+        where: 'Macalester College, MN, USA',
+        txt: 'Summa Cum Laude graduation',
       },
       {
-        date: '08 / 2009 – 07 / 2015',
+        date: '2009 – 2011',
         extra: '',
-        title: 'Realschulabschluss',
-        where: 'YourSchool Ldt, TX',
+        title: 'International Baccalaureate',
+        where: 'RCNUWC, Norway',
         txt: '',
       },
     ],
@@ -377,14 +373,15 @@ export default {
 .cont {
   display: grid;
   grid-template-areas:
-    'datum titel'
-    'extra ort'
-    '. txt';
+    '. . .'
+    'date title where'
+    'extra . .'
+    '. txt .';
   grid-template-columns: 11rem 370px;
   gap: 0rem 1rem;
   margin-bottom: 1.3rem;
   span:nth-child(1) {
-    grid-area: datum;
+    grid-area: date;
     font-weight: 600;
     font-size: 0.9rem;
     color: hsl(0deg 0% 63%);
@@ -397,11 +394,10 @@ export default {
     letter-spacing: -0.02rem;
   }
   span:nth-child(3) {
-    grid-area: titel;
+    grid-area: title;
   }
   span:nth-child(4) {
-    grid-area: ort;
-    font-size: 0.9rem;
+    grid-area: where;
     color: hsl(0deg 0% 63%);
   }
   span:nth-child(5) {
