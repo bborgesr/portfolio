@@ -1,83 +1,29 @@
 <template>
   <div>
     <div id="header" :class="{ scrolled: !scrolledDown }">
-      <!-- <div class="side"></div> -->
       <div class="mid">
         <div class="logo-holder">
           <button class="bar">
             <fa fas="bars"></fa>
           </button>
-          <a href="fb.com">
+          <a href="#">
             <img
               class="logo"
-              src="/svg/personal-logo.svg"
-              alt="Kiwi standing on oval"
+              src="/images/transparent-logo.png"
+              alt="Barbara"
             />
           </a>
-          <!-- <div class="buttons logo">
-            <button>Wjatscheslaw Smesnoj</button>
-          </div> -->
         </div>
-
-        <!-- <SearchBox /> -->
-        <div class="search-holder"></div>
-        <!-- <div class="links"> -->
-        <div class="buttons">
-          <!-- <button>Projects</button> -->
-          <!-- <button>Contact</button> -->
-          <!-- <button>Impressum</button> -->
-        </div>
-        <a class="logo-mobile" href="fb.com">
-          <img
-            class="logo"
-            src="/svg/personal-logo.svg"
-            alt="Kiwi standing on oval"
-          />
+        <a class="logo-mobile" href="#">
+          <img class="logo" src="/images/transparent-logo.png" alt="Barbara" />
         </a>
-        <!-- <div class="lang">
-            <div class="option">
-              <input type="radio" name="Lang" id="ger-radio" />
-              <label for="ger-radio">
-                <img
-                  src="/svg/flags/rounded/germany.svg"
-                  alt="German Language"
-                />
-              </label>
-            </div>
-            <div class="option">
-              <input type="radio" name="Lang" id="rus-radio" />
-              <label for="rus-radio">
-                <img
-                  src="/svg/flags/rounded/russia.svg"
-                  alt="Russian Language"
-                />
-              </label>
-            </div>
-            <div class="option">
-              <input type="radio" name="Lang" id="eng-radio" checked />
-              <label for="eng-radio">
-                <img
-                  src="/svg/flags/rounded/united-kingdom.svg"
-                  alt="English Language"
-                />
-              </label>
-            </div>
-          </div> -->
-        <!-- </div> -->
       </div>
-
-      <!-- <div class="side"></div> -->
     </div>
   </div>
 </template>
 
 <script>
-// import SearchBox from './SearchBox.vue';
-
 export default {
-  components: {
-    // SearchBox,
-  },
   props: {
     scrolledDown: Boolean,
   },
@@ -135,7 +81,6 @@ export default {
   display: none;
   align-content: center;
 }
-/* LANGUAGE */
 
 .lang {
   display: grid;
@@ -179,23 +124,11 @@ input[type='radio']:checked + label > img {
 }
 
 /* header */
-
 @media screen and (max-width: 1650px) {
   #header {
     padding: 0rem 1rem;
     box-sizing: border-box;
   }
-}
-
-@media screen and (max-width: 1023px) {
-  /* .links {
-    grid-template-columns: max-content !important;
-    justify-self: flex-end !important;
-    justify-content: end;
-  }
-  .buttons {
-    display: none !important;
-  } */
 }
 
 .buttons > button:hover {
@@ -218,8 +151,6 @@ input[type='radio']:checked + label > img {
   width: inherit;
   max-width: 20rem;
   justify-self: end;
-  /* margin: auto; */
-  /* justify-self: center;*/
 }
 
 .logo-holder {
@@ -235,7 +166,6 @@ input[type='radio']:checked + label > img {
   place-content: center;
   position: fixed;
   width: 100%;
-  /* background-color: var(--bg-root); */
   height: 60px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
   z-index: 1000;
@@ -251,10 +181,7 @@ input[type='radio']:checked + label > img {
   gap: 1rem;
   display: grid;
   grid-auto-flow: column;
-  /* grid-template-columns: 1fr auto; */
   align-items: end;
-  /* justify-self: flex-end; */
-  /* width: 100%; */
 }
 .mid > .links > a:hover {
   text-decoration: underline;
