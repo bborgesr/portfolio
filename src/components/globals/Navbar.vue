@@ -9,13 +9,17 @@
           <a href="#">
             <img
               class="logo"
-              src="/images/transparent-logo.png"
+              src="/portfolio/images/transparent-logo.png"
               alt="Barbara"
             />
           </a>
         </div>
         <a class="logo-mobile" href="#">
-          <img class="logo" src="/images/transparent-logo.png" alt="Barbara" />
+          <img
+            class="logo"
+            src="/portfolio/images/transparent-logo.png"
+            alt="Barbara"
+          />
         </a>
       </div>
     </div>
