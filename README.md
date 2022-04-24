@@ -10,5 +10,7 @@ npm install
 npm start
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Builds for production
+```
+npm run build
+```
