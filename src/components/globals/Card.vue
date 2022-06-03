@@ -22,10 +22,6 @@
           <div class="tags">
             <span v-for="tag in item.tags" :key="tag">{{ tag }}</span>
           </div>
-          <div class="tags links">
-            <a :href="item.demo" v-if="item.demo.length > 1">Demo</a>
-            <a :href="item.source">Source</a>
-          </div>
         </div>
       </div>
     </kinesis-element>

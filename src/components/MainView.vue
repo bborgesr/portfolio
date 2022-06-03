@@ -41,10 +41,16 @@
             academic path had an international bent, having completed the IB
             program at <a href="https://uwcrcn.no/">RCNUWC</a> in Norway and my
             bachelor's at
-            <a href="https://www.macalester.edu/"> Macalester College</a>
+            <a href="https://www.macalester.edu/">Macalester College</a>
             in the US. I graduated summa cum laude with a double major in
             Computer Science, and Applied Mathematics and Statistics, and a
             double minor in Physics and Sociology.
+          </span>
+          <br />
+          <span>
+            I started my career working as a software developer for RStudio,
+            where I contributed to several open source R packages, which as
+            emphasis on <a href="https://shiny.rstudio.com/">Shiny</a>.
           </span>
           <br />
         </section>
@@ -79,7 +85,7 @@
           </div>
           <div class="education">
             <h4>Education</h4>
-            <div class="cont" v-for="i in education" :key="i.titel">
+            <div class="cont" v-for="i in education" :key="i.title">
               <span>{{ i.date }}</span>
               <span>{{ i.extra }}</span>
               <span>{{ i.title }}</span>
@@ -138,8 +144,8 @@ export default {
         title: 'Fullstack Developer',
         where: 'LTPlabs, Remote',
         txt:
-          'Maintenance of various applications for different clients, custom-made ' +
-          'to their needs and with embedded analytics to empower decision-making',
+          'Development and maintenance of various applications for different clients, ' +
+          'custom-made to their needs and with embedded analytics to empower decision-making',
       },
       {
         date: '2018 - 2019',
@@ -147,10 +153,9 @@ export default {
         title: 'Frontend Developer',
         where: 'Blip, Porto',
         txt:
-          'Maintenance of the www.paddypower.com betting website, including ' +
-          'bug fixing and feature implementation, such as a Multivariate Testing ' +
-          'campaign to test different UIs and a Bet Tracker project, to provide users ' +
-          'with one place where all bets, open and settled, are displayed',
+          'Maintenance of the www.paddypower.com betting website, including a ' +
+          'Multivariate Testing campaign to test different UIs and a Bet Tracker ' +
+          'project, to provide users with one place where all bets are displayed',
       },
       {
         date: '2016 - 2018',
@@ -158,10 +163,9 @@ export default {
         title: 'Software Developer',
         where: 'RStudio, Remote',
         txt:
-          'Part of the Shiny development team (https://shiny.rstudio.com/). We ' +
-          'were responsible for maintaining several R packages: shiny, ' +
-          'shinydashboard, flexdashboard and many others that would pop up along ' +
-          'the way.',
+          'Part of the Shiny development team. We were responsible for ' +
+          'maintaining several R packages: shiny, shinydashboard, flexdashboard ' +
+          'and many others that would pop up along the way',
       },
     ],
     education: [
@@ -193,10 +197,8 @@ export default {
             img: '/images/01.png',
           },
         ],
-        titel: 'Social Networking Plattform',
+        title: 'Social Networking Plattform',
         tags: ['VueJS', 'NodeJS', 'mongoDB'],
-        demo: '',
-        source: 'https://github.com/w-smesnoj/BehanceApp',
       },
       {
         id: 1,
@@ -208,10 +210,8 @@ export default {
             img: '/images/03.png',
           },
         ],
-        titel: 'Semantic Form Application',
+        title: 'Semantic Form Application',
         tags: ['VueJS', 'NodeJS', 'mongoDB'],
-        demo: 'https://diprella-login.herokuapp.com/',
-        source: 'https://github.com/w-smesnoj/diprella-login',
       },
       {
         id: 2,
@@ -223,10 +223,8 @@ export default {
             img: '/images/02.png',
           },
         ],
-        titel: 'CMS Frontend Webstore',
+        title: 'CMS Frontend Webstore',
         tags: ['VueJS', 'Contentful'],
-        demo: 'https://fierce-island-96798.herokuapp.com/',
-        source: 'https://github.com/w-smesnoj/parallax-swipe',
       },
       {
         id: 3,
@@ -238,10 +236,8 @@ export default {
             img: '/images/04.png',
           },
         ],
-        titel: 'Whiteboard Collaboration App',
+        title: 'Whiteboard Collaboration App',
         tags: ['React', 'NodeJS', 'PostgreSQL', 'WebSockets'],
-        demo: '',
-        source: 'https://github.com/w-smesnoj/visual-collaboration-platform',
       },
     ],
     selected: null,
@@ -342,7 +338,7 @@ export default {
     grid-template-areas:
       'datum'
       'extra'
-      'titel'
+      'title'
       'ort'
       'txt' !important;
     grid-template-columns: 100% !important;
@@ -398,7 +394,6 @@ export default {
   }
   span:nth-child(4) {
     grid-area: where;
-    color: hsl(0deg 0% 63%);
   }
   span:nth-child(5) {
     grid-area: txt;
@@ -408,7 +403,6 @@ export default {
 }
 
 .contact {
-  // margin: 2rem 0rem;
   display: flex;
   flex-flow: column;
   gap: 0.7rem;
@@ -510,7 +504,6 @@ section {
 }
 .current {
   border-left: 6px solid #ffffff1c;
-  // box-shadow: 0px 0px 0px 0px black;
 }
 .first {
   color: black;
@@ -587,7 +580,6 @@ section {
 
 .holder::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  /* background-color: #bebebe; */
   border: 5px solid transparent;
   background-clip: content-box;
 }
@@ -745,22 +737,19 @@ div > .main {
 }
 </style>
 <style>
-/* unvisited link */
+#about a {
+  text-decoration: underline !important;
+}
+
 a:link {
   color: var(--accent-2);
 }
-
-/* visited link */
 a:visited {
   color: var(--accent-1);
 }
-
-/* mouse over link */
 a:hover {
   color: var(--accent-5);
 }
-
-/* selected link */
 a:active {
   color: var(--accent-3);
 }

@@ -22,10 +22,6 @@
         <div class="tags">
           <span v-for="tag in selected.tags" :key="tag">{{ tag }}</span>
         </div>
-        <div class="tags links">
-          <a :href="selected.demo" v-if="selected.demo.length > 1">Demo</a>
-          <a :href="selected.source">Source</a>
-        </div>
         <div class="description"></div>
       </div>
     </div>
